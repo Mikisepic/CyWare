@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro:wght@600&display=swap');
+
+* {
+	font-family: 'Advent Pro', sans-serif;
+}
+
+body {
+	/* background: #44bdad !important; */
+}
+
+.space {
+	padding: 10px 15px;
+}
+
+.header {
+	height: 500px;
+	background: url('/static/img/top.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 500px;
+}
+
+h1 {
+	font-size: 35px !important;
+}
+
+.quiz-red {
+	background: #e27d60 !important;
+	height: 150px;
+	border-radius: 25px !important;
+	font-size: 40px !important;
+	width: 80% !important;
+}
+
+.button-group a {
+	background: white;
+	border: 2px solid black;
+}
+
+.current_page_item {
+	background: #007bff !important;
+}
+
+.card-img-bottom {
+	border-radius: 25px;
+	opacity: 0.8;
+}
+
+a:hover {
+	text-decoration: none !important;
+}
+
+button:focus {
+	outline: none !important;
+}
+
+.content p {
+	font-size: 25px;
+}
+
+/*class for no select*/
+.noselect {
+	touch-callout: none; /* iOS Safari */
+	user-select: none; /* Safari */
+	-khtml-user-select: none; /* Konqueror HTML */
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* Internet Explorer/Edge */
+	user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+	height: 8px;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+	height: 0;
+	display: block;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-track-piece {
+	background-color: #d8d8d3;
+	-webkit-border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	height: 50px;
+	background-color: #64a1d2;
+	-webkit-border-radius: 6px;
+}
+
+/* NAVBAR */
+
+li {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+a {
+	font-size: 30px;
+	padding: auto 50px !important;
+}
+
+/* CONTENT */
+
+/* .video-part {
+	height: 400px;
+}
+
+iframe {
+	opacity: 0.9;
+	width: 100%;
+	height: 100%;
+	max-height: 300px;
+	border-radius: 50px;
+	border: none;
+} */
+
+img {
+	object-fit: cover;
+	width: 100%;
+	height: 200px;
+	border-radius: 50px;
+	opacity: 0.9;
+}
+
+/* QUIZ */
+
+.progress-bar-empty {
+	background: lightgrey;
+	border-radius: 20px;
+}
+
+.progress-bar-center {
+	height: 15px;
+	background: green;
+	border-radius: 20px;
+}
+
+.question {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+.answers {
+	margin-top: 50px;
+	margin-bottom: 20px;
+	text-align: left;
+	display: inline-block;
+}
+.answers label {
+	display: block;
+	margin-bottom: 10px;
+}
+button {
+	font-size: 22px;
+	background-color: #279;
+	color: #fff;
+	border: 0;
+	border-radius: 20px !important;
+	padding: 20px;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+button:hover {
+	background-color: #38a;
+}
+
+.slide {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	opacity: 0;
+	transition: opacity 0.5s;
+}
+
+.active-slide {
+	opacity: 1;
+	z-index: 2;
+}
+.quiz-container {
+	position: relative;
+	height: 300px;
+	margin-top: 40px;
+}
+
+.results {
+	font-size: 40px;
+}
+
+.result-par {
+	font-size: 20px;
+}
+
+.quiz-end-button {
+	background: #e27d60 !important;
+	margin-top: 50px;
+	width: 300px;
+	height: 50px;
+}
+
+/* CARDS */
+
+.card {
+	width: 100% !important;
+	border: none !important;
+}
+
+.card:hover {
+	cursor: pointer;
+}
+
+.card h5 {
+	font-size: 30px;
+}
+
+.card p {
+	font-size: 22px;
+}
+
+#card0 {
+	background-color: rgba(255, 0, 0, 0.815);
+}
+
+#card1 {
+	background-color: lightgreen;
+}
+
+#card2 {
+	background-color: lightblue;
+}
+
+#card3 {
+	background-color: yellow;
+}
+
+.modal-content {
+	background: #44bdad !important;
+	border-radius: 20px !important;
+}
+
+.modal-content h5 {
+	font-size: 30px;
+}
+
+.modal-content p {
+	font-size: 25px;
+}
+
+.mod-image {
+	border-radius: 20px;
+}

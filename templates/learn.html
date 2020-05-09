@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="row mb-5">
+    {% for card in cards %}
+    <div class="col-12 col-sm-6 col-lg-3">
+        <div class="card mx-auto my-3" id="card{{ loop.index-1 }}" style="width: 18rem; border-radius: 25px;"
+        data-toggle="modal" data-target="#learnMoreModal">
+            <img id="image-card{{ loop.index-1 }}" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ascentor.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2FiStock-867031722-1024x724.jpg&f=1&nofb=1" class="card-img-bottom">
+            <div class="card-body text-center">
+              <h5 id="title-card{{ loop.index-1 }}"  class="card-title">{{ card['title'] }}</h5>
+              <p id="content-card{{ loop.index-1 }}" class="card-text">{{ card['content'] }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<a href="/quiz">
+    <button type="button" class="btn btn-lg btn-block quiz-red mx-auto">Ready to try the test again?</button>
+</a>
+
+<!-- Modal -->
+  <div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="learnMoreModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="learnMoreModalTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img class="mod-image mb-3" id="learnMoreModalImage">
+          <p id="learnMoreModalContent"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

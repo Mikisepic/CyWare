@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+
+{% block content %}
+
+<div id="questionaire" class="questionaire mb-5">
+    <p class="display-1 text-center">TEST YOUR CYBER KNOWLEDGE</p>
+
+    <div class="progress-bar-empty">
+        <div id="myBar" class="progress-bar-center" style="width:0%"></div>
+    </div>
+
+    <div id="full-quiz" class="quiz-container text-center">
+        <div id="quiz"></div>
+    </div>
+    <div class="text-center button-collection mt-3">
+        <!-- <button id="previous">Previous Question</button> -->
+        <button id="next">NEXT QUESTION</button>
+        <button id="submit">SUBMIT ANSWERS</button>
+    </div>
+    <div id="results" class="results text-center"></div>
+</div>
+
+{% endblock %}

@@ -1,6 +1,6 @@
 # CyWare
 
-## This platform was created in [The Racoons Virtual Student Hackathon](http://theraccoons.org)
+## This platform was created in [The Racoons Virtual Student Hackathon in 2020](http://theraccoons.org)
 
 ### This is the platform for kids to learn and test themselves about cybersecurity
 ### [More info here](https://devpost.com/software/cyware)

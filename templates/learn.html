@@ -2,12 +2,26 @@
 
 {% block content %}
 
+<div class="row top-learning-row">
+  <div class="col-6">
+    <img src="/static/img/Livonia paliec mājās sticker.png">
+  </div>
+  <div class="col-6">
+    <ol class="mt-5">
+      <li>You use the internet every day- social media, emails, online shops, movies and games... The same tools that make it easy for you to share information also make it easier for hackers and scammers to steal that information and use it to damage devices, relationships, and reputations. Every piece of information you share online has the potential to be sold, misused, or leaked. And it is on the rise- here was a 54% increase in scams last year. Not only that, but careless use of the internet might provoke fear and depression in you or your friends!</li>
+      <li>Sharing sensitive/inappropriate information or being careless might lead to data theft, negative consequences with authorities or employers, getting viruses or even threats and abuse. </li>
+      <li>Luckily, there are ways to avoid trouble before getting in it. You have to Share with care, Recognise the Fake, Lock it Well and Be Kind. Click on each of the cards to find out more tips and tricks!</li>
+      <li>But most importantly- if you do fall in a trap, be brave and smart- seek for help! Report the threats to an adult you trust and online, to make sure others don’t make the same mistake!</li>
+    </ol>
+  </div>
+</div>
+
 <div class="row mb-5">
     {% for card in cards %}
     <div class="col-12 col-sm-6 col-lg-3">
         <div class="card mx-auto my-3" id="card{{ loop.index-1 }}" style="width: 18rem; border-radius: 25px;"
         data-toggle="modal" data-target="#learnMoreModal">
-            <img id="image-card{{ loop.index-1 }}" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.ascentor.co.uk%2Fwp-content%2Fuploads%2F2018%2F11%2FiStock-867031722-1024x724.jpg&f=1&nofb=1" class="card-img-bottom">
+            <img id="image-card{{ loop.index-1 }}" src="{{ card['image'] }}" class="card-img-bottom">
             <div class="card-body text-center">
               <h5 id="title-card{{ loop.index-1 }}"  class="card-title">{{ card['title'] }}</h5>
               <p id="content-card{{ loop.index-1 }}" class="card-text">{{ card['content'] }}</p>
@@ -23,15 +37,15 @@
 
 <!-- Modal -->
   <div class="modal fade" id="learnMoreModal" tabindex="-1" role="dialog" aria-labelledby="learnMoreModalTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="learnMoreModalTitle">Modal title</h5>
+          <h5 class="modal-title" id="learnMoreModalTitle"></h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body text-center">
           <img class="mod-image mb-3" id="learnMoreModalImage">
           <p id="learnMoreModalContent"></p>
         </div>

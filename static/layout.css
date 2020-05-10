@@ -31,6 +31,14 @@ footer .pegi {
 	background-size: 100% 500px;
 }
 
+.header-slogan {
+	position: absolute;
+	top: 250px;
+	left: 65%;
+	font-size: 35px;
+	color: white;
+}
+
 h1 {
 	font-size: 35px !important;
 }
@@ -53,7 +61,7 @@ h1 {
 }
 
 .button-group a:hover {
-	background: #007bff !important;
+	background: #44bdad !important;
 }
 
 .card-img-bottom {
@@ -211,9 +219,24 @@ button:hover {
 
 /* CARDS */
 
+.top-learning-row {
+	height: 500px;
+	margin-bottom: 100px;
+}
+
+.top-learning-row img {
+	height: 100%;
+}
+
+.top-learning-row li {
+	font-size: 18px;
+}
+
 .card {
 	width: 100% !important;
 	border: none !important;
+	height: 450px;
+	overflow: hidden;
 }
 
 .card:hover {
@@ -222,6 +245,8 @@ button:hover {
 
 .card h5 {
 	font-size: 30px;
+	height: 72px !important;
+	line-height: 40px;
 }
 
 .card p {
@@ -245,7 +270,7 @@ button:hover {
 }
 
 .modal-content {
-	background: #44bdad !important;
+	background-color: #44bdad !important;
 	border-radius: 20px !important;
 }
 
@@ -259,4 +284,5 @@ button:hover {
 
 .mod-image {
 	border-radius: 20px;
+	height: 300px;
 }

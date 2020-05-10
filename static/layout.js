@@ -262,8 +262,7 @@ const myQuestions = [
 	},
 	{
 		question: 'When creating a new TikTok account, what do you do?',
-		image:
-			'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.idgesg.net%2Fimages%2Farticle%2F2018%2F02%2Fsecurity_computer_crime_hacker_hacking_thinkstock_608516150-100750000-large.jpg&f=1&nofb=1',
+		image: '/static/img/meme-password.gif',
 		answers: {
 			a: "Use a password you usually use, so you don't forget it",
 			b: 'Think of a unique password which you will most likely forget in 5 minutes',

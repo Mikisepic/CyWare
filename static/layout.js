@@ -34,13 +34,7 @@ function buildQuiz() {
 		// and for each available answer...
 		for (letter in currentQuestion.answers) {
 			// ...add an HTML radio button
-			answers.push(
-				`<label>
-                    <input type="radio" name="question${questionNumber}" value="${letter}">
-                    ${currentQuestion.answers[letter]}
-                </label>
-                `
-			);
+			answers.push(answer(questionNumber, letter, currentQuestion.answers[letter]));
 		}
 
 		// add this question and its answers to the output

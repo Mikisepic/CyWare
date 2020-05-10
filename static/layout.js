@@ -38,17 +38,7 @@ function buildQuiz() {
 		}
 
 		// add this question and its answers to the output
-		output.push(
-			`<div class="slide">
-				<div class="question"> ${currentQuestion.question} </div>
-				<div class="row">
-				<div class="col-4"><img class="mb-4" src=${currentQuestion.image}></div>
-				<div class="col-4"><div id="answer-list" class="answers"> ${answers.join('')} </div></div>
-				<div class="col-4"><img class="mb-4" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FCz_XFY6CZ1c%2Fmaxresdefault.jpg&f=1&nofb=1"></div>
-				</div>
-            </div>
-            `
-		);
+		output.push(slide(currentQuestion, answers));
 	});
 
 	// finally combine our output list into one string of HTML and put it on the page
@@ -88,33 +78,11 @@ function showResults() {
 
 	// show number of correct answers out of total
 	document.getElementById('full-quiz').style.display = 'none';
-	if (numCorrect > 2) {
+	if (numCorrect > 5) {
 		// resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
-		resultsContainer.innerHTML = `
-		<h1>Wow you are very smart! Keep it up</h1>
-		`;
+		resultsContainer.innerHTML = results_success();
 	} else {
-		resultsContainer.innerHTML = `
-		<div class="row mt-5">
-			<div class="col-4">
-				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FCz_XFY6CZ1c%2Fmaxresdefault.jpg&f=1&nofb=1">
-				<a href="/learn">
-					<button style="position: relative; left: 100px;" class="quiz-end-button btn btn-lg" role="button" aria-pressed="true">Go and learn more</button>
-				</a>
-			</div>
-			<div class="col-4">
-				<h1 styles="font-size: 50px !important;">YIKES! YOU FAILED!</h1>
-				<p class="result-par">This is your result that shows either how good or bad you are.</p>
-				<p class="result-par">Either way this paragraph advises you to learn more. #staywoke</p>
-			</div>
-			<div class="col-4">
-				<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fconfidentqueen.files.wordpress.com%2F2018%2F06%2Fsad-face.png&f=1&nofb=1">
-				<a href="/quiz">
-					<button style="position: relative; right: 100px;" class="quiz-end-button btn btn-lg" role="button" aria-pressed="true">Take the test again</button>
-				</a>
-			</div>
-		</div>
-		`;
+		resultsContainer.innerHTML = results_fail();
 	}
 }
 
@@ -172,6 +140,9 @@ const quizContainer = document.getElementById('quiz');
 const resultsContainer = document.getElementById('results');
 const submitButton = document.getElementById('submit');
 // json file would be better
+
+// didn't have enough time to parse .json file
+
 const myQuestions = [
 	{
 		question:

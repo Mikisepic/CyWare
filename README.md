@@ -5,6 +5,12 @@
 ### This is the platform for kids to learn and test themselves about cybersecurity
 ### [More info here](https://devpost.com/software/cyware)
 
+![image](static/img/landing.png)
+![image](static/img/footer.png)
+![image](static/img/quiz.png)
+![image](static/img/learn.png)
+![image](static/img/cards.png)
+
 ## To start:
 
 1. Clone the repository
@@ -27,3 +33,4 @@
 
 7. Open it on localhost
 http://127.0.0.1:5000
+
